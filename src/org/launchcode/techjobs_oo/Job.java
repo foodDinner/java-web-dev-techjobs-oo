@@ -97,7 +97,8 @@ public class Job {
     }
 
     public String toString() {
-        
+        String newLine = "\n";
+
 
         return "\n" + "ID: " + this.getId() + "\n" + "Name: " + this.getName() + "\n" + "Employer: " + this.getEmployer().getValue()
                 + "\n" + "Location: " + this.getLocation().getValue() + "\n" +  "Position Type: " + this.getPositionType().getValue()
