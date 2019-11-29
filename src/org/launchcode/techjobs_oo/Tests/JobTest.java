@@ -46,4 +46,10 @@ public class JobTest {
     public void testJobsForEquality() {
         assertFalse(test_Job3.equals(test_Job4));
     }
+
+    @Test
+    public void testToString() {
+//        assertEquals("\n","");
+        System.out.println(test_Job3.toString());
+    }
 }

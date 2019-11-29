@@ -95,4 +95,12 @@ public class Job {
     public int getId() {
         return id;
     }
+
+    public String toString() {
+        
+
+        return "\n" + "ID: " + this.getId() + "\n" + "Name: " + this.getName() + "\n" + "Employer: " + this.getEmployer().getValue()
+                + "\n" + "Location: " + this.getLocation().getValue() + "\n" +  "Position Type: " + this.getPositionType().getValue()
+                + "\n" + "Core Competency: " + this.getCoreCompetency().getValue() + "\n";
+    }
 }
