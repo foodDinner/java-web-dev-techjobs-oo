@@ -49,7 +49,12 @@ public class JobTest {
 
     @Test
     public void testToString() {
-//        assertEquals("\n","");
-        System.out.println(test_Job3.toString());
+        "\n".equals(test_Job3.toString().charAt(0));
+        "ID: 3".equals(test_Job3.jobID);
+        "Name: Product tester".equals(test_Job3.jobName);
+        "Employer: ACME".equals(test_Job3.jobEmployer);
+        "Location: Desert".equals(test_Job3.jobLocation);
+        "Position Type: Quality control".equals(test_Job3.jobPosition);
+        "Core Competency: Persistence".equals(test_Job3.jobCoreComp);
     }
 }

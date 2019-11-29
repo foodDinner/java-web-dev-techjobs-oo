@@ -13,6 +13,14 @@ public class Job {
     private PositionType positionType;
     private CoreCompetency coreCompetency;
 
+    public String newLine = "\n";
+    public String jobID;
+    public String jobName;
+    public String jobEmployer;
+    public String jobLocation;
+    public String jobPosition;
+    public String jobCoreComp;
+
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
@@ -97,11 +105,39 @@ public class Job {
     }
 
     public String toString() {
-        String newLine = "\n";
 
+        jobID = newLine + "ID: " + this.getId() + newLine;
 
-        return "\n" + "ID: " + this.getId() + "\n" + "Name: " + this.getName() + "\n" + "Employer: " + this.getEmployer().getValue()
-                + "\n" + "Location: " + this.getLocation().getValue() + "\n" +  "Position Type: " + this.getPositionType().getValue()
-                + "\n" + "Core Competency: " + this.getCoreCompetency().getValue() + "\n";
+        if (this.getName().equals(null)) {
+            jobName = "Data not available";
+        } else {
+            jobName = "Name: " + this.getName() + newLine;
+        }
+
+        if (this.getEmployer().getValue().equals(null)) {
+            jobEmployer = "Data not available";
+        } else {
+            jobEmployer = "Employer: " + this.getEmployer().getValue() + newLine;
+        }
+
+        if (this.getLocation().getValue().equals(null)) {
+            jobLocation = "Data not available";
+        } else {
+            jobLocation = "Location: " + this.getLocation().getValue() + newLine;
+        }
+
+        if (this.getPositionType().getValue().equals(null)) {
+            jobPosition = "Data not available";
+        } else {
+            jobPosition = "Position Type: " + this.getPositionType().getValue() + newLine;
+        }
+
+        if (this.getCoreCompetency().getValue().equals(null)) {
+            jobCoreComp = "Data not available";
+        } else {
+            jobCoreComp = "Core Competency: " +  this.getCoreCompetency().getValue() + newLine;
+        }
+
+        return jobID + jobName + jobEmployer + jobLocation + jobPosition + jobCoreComp;
     }
 }
