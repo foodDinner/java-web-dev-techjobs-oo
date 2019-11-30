@@ -104,6 +104,7 @@ public class Job {
         return id;
     }
 
+    @Override
     public String toString() {
 
         jobID = newLine + "ID: " + this.getId() + newLine;
