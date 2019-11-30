@@ -49,12 +49,26 @@ public class JobTest {
 
     @Test
     public void testToString() {
-        "\n".equals(test_Job3.toString().charAt(0));
-        "ID: 3".equals(test_Job3.jobID);
-        "Name: Product tester".equals(test_Job3.jobName);
-        "Employer: ACME".equals(test_Job3.jobEmployer);
-        "Location: Desert".equals(test_Job3.jobLocation);
-        "Position Type: Quality control".equals(test_Job3.jobPosition);
-        "Core Competency: Persistence".equals(test_Job3.jobCoreComp);
+        char lastChar = test_Job3.toString().charAt(test_Job3.toString().length() - 1);
+        String lastCharString = Character.toString(lastChar);
+
+        assertEquals(0,test_Job3.toString().indexOf("\n"));
+        assertEquals("\n",lastCharString);
+        assertEquals("\nID: 3\n",test_Job3.jobID);
+        assertEquals("Name: Product tester\n", test_Job3.jobName);
+        assertEquals("Employer: ACME\n", test_Job3.jobEmployer);
+        assertEquals("Location: Desert\n", test_Job3.jobLocation);
+        assertEquals("Position Type: Quality control\n", test_Job3.jobPosition);
+        assertEquals("Core Competency: Persistence\n", test_Job3.jobCoreComp);
+    }
+
+    @Test
+    public void testNoData() {
+        test_Job1.toString();
+        assertEquals("Name: Data not available\n", test_Job1.jobName);
+        assertEquals("Employer: Data not available\n", test_Job1.jobEmployer);
+        assertEquals("Location: Data not available\n", test_Job1.jobLocation);
+        assertEquals("Position Type: Data not available\n", test_Job1.jobPosition);
+        assertEquals("Core Competency: Data not available\n", test_Job1.jobCoreComp);
     }
 }

@@ -108,32 +108,32 @@ public class Job {
 
         jobID = newLine + "ID: " + this.getId() + newLine;
 
-        if (this.getName().equals(null)) {
-            jobName = "Data not available";
+        if (this.getName() == null) {
+            jobName = "Name: Data not available\n";
         } else {
             jobName = "Name: " + this.getName() + newLine;
         }
 
-        if (this.getEmployer().getValue().equals(null)) {
-            jobEmployer = "Data not available";
+        if (this.getEmployer() == null) {
+            jobEmployer = "Employer: Data not available\n";
         } else {
             jobEmployer = "Employer: " + this.getEmployer().getValue() + newLine;
         }
 
-        if (this.getLocation().getValue().equals(null)) {
-            jobLocation = "Data not available";
+        if (this.getLocation() == null) {
+            jobLocation = "Location: Data not available\n";
         } else {
             jobLocation = "Location: " + this.getLocation().getValue() + newLine;
         }
 
-        if (this.getPositionType().getValue().equals(null)) {
-            jobPosition = "Data not available";
+        if (this.getPositionType() == null) {
+            jobPosition = "Position Type: Data not available\n";
         } else {
             jobPosition = "Position Type: " + this.getPositionType().getValue() + newLine;
         }
 
-        if (this.getCoreCompetency().getValue().equals(null)) {
-            jobCoreComp = "Data not available";
+        if (this.getCoreCompetency() == null) {
+            jobCoreComp = "Core Competency: Data not available\n";
         } else {
             jobCoreComp = "Core Competency: " +  this.getCoreCompetency().getValue() + newLine;
         }
