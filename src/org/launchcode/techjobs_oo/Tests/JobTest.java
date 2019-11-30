@@ -30,7 +30,7 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetsAllFields() {
-        assertEquals(3,test_Job3.getId(), 001);
+        assertEquals(11,test_Job3.getId(), 001);
         assertEquals("Product tester",test_Job3.getName());
         assertEquals("ACME",test_Job3.getEmployer().getValue());
         assertTrue(test_Job3.getEmployer() instanceof Employer);
@@ -54,7 +54,7 @@ public class JobTest {
 
         assertEquals(0,test_Job3.toString().indexOf("\n"));
         assertEquals("\n",lastCharString);
-        assertEquals("\nID: 3\n",test_Job3.jobID);
+        assertEquals("\nID: 7\n",test_Job3.jobID);
         assertEquals("Name: Product tester\n", test_Job3.jobName);
         assertEquals("Employer: ACME\n", test_Job3.jobEmployer);
         assertEquals("Location: Desert\n", test_Job3.jobLocation);
